@@ -1,10 +1,29 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>Title</title>
+    <meta charset="UTF-8"/>
+    <title>Framework HD</title>
 </head>
 <body>
+    <div id="app">
+        <span p-text="message"></span>
+        <br/>
+        <input type="text" p-model="message"/>
+    </div>
+
+    <script src="./framework.js"></script>
+    <script>
+        const { createApp } = Framework;
+
+        const app = createApp({
+            data(){
+                return{
+                    message: 'Hola Vue',
+                };
+            }
+        })
+        app.mount();
+    </script>
 
 </body>
 </html>
